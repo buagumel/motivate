@@ -48,6 +48,10 @@ body {
   
 }
 
+#wlcm {
+    text-align: center;
+}
+
 .btns {
     margin: 10px;
 }
