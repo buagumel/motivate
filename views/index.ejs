@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivate Me</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</head>
+<body>
+
+
+<div class="header">
+
+    <div class="logo "><h1>MOTIVATE</h1></div>
+    <div class="mode"><button id="mode">MODE</button></div>
+
+</div>
+
+<div class="content">
+    
+
+<%  if (locals.data){ %>
+    <div id="motivation"><h2> <%= data.text %> </h2> <h4> ~ <%= data.author  %></h4></div>
+<%   }else{%>
+<h1 id="">Let's get you motivated!</h1>
+<%  } %> 
+
+     
+    
+    
+
+
+<div style="display: flex;">
+    <form action="/submit" method="post">
+    <button id="motivate-btn" class="btns" type="submit" >Motivate</button>
+</form>
+    <%  if (locals.data){ %>
+    <button id="capture-btn" class="btns">Capture</button>
+    <% } %>
+
+</div>
+</div>
+
+
+<footer>
+    <div>
+        <p>Made with ❤️ by <span>devBaffa!✌️</span></p>
+    </div>
+</footer>
+
+
+<script>
+     
+    
+    // let motivation = document.getElementById("motivation");
+
+    // let text = motivation.innerText;
+
+    // let openQ = `<span style="color: purple; font-size: 80px">${text.charAt(0)}</span>`
+    // let closeQ = `<span style="color: purple; font-size: 80px">${text.charAt(text.length-1)}</span>`
+
+    // let mText = `<br><span style="color: white; font-size: 40px">${text.slice(1, text.length-1)}</span>`
+
+    // motivation.innerHTML = openQ + mText + closeQ
+
+    document.getElementById('capture-btn').addEventListener('click', () => {
+    const content = document.getElementById('motivation');
+
+    if (content) {
+        html2canvas(content, {
+            scale: 100 // Increase the scale factor for higher resolution (try 2, 3, or more)
+        }).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/jpeg', 1.0); // The second parameter here specifies image quality (1.0 for maximum quality)
+            link.download = 'div-capture.jpg';
+            link.click();
+        });
+    } else {
+        alert('No div to capture! Please create a div first.');
+    }
+});
+
+
+
+
+
+</script>
+</body>
+</html>

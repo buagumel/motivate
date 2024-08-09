@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+   
+}
+
+.light-mode {
+    background-color: white;
+}
+
+body {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        background-color: #000000;
+        opacity: 1;
+        background-image: radial-gradient(#ffffff 0.5px, #000000 0.5px);
+        background-size: 10px 10px;
+     
+       
+        
+}
+.header {
+   
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+   
+}
+
+.logo{
+    margin-left: 20px;
+
+}
+
+#capture-btn {
+   
+  
+}
+
+.btns {
+    margin: 10px;
+}
+
+#motivation {
+    max-width: 60%;
+    min-width: none;
+    
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+}
+.mode {
+    margin-right: 20px;
+}
+
+h4{
+    font-family: "Gupter", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Gupter", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.logo h1 {
+    font-size: 30px;
+  
+        color: purple;
+        
+        
+            text-shadow: 
+              1px 1px 0px white, 
+        
+              1px -1px 0px white; 
+          
+          
+      
+    
+}
+
+
+
+button {
+    padding: 10px;
+    width: 100px;
+    background-color: purple;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+footer{
+    text-align: center;
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+} 
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    flex: ;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+#openQ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    font-size: 70px;
+}
